@@ -25,6 +25,7 @@ yarn-error.log*
 
 # local env files
 .env*.local
+.env.*
 
 # config
 .now
@@ -33,3 +34,4 @@ yarn-error.log*
 
 # unused icons
 /icons
+
