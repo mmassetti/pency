@@ -19,9 +19,9 @@ export function getItems(items: CartItem[]): string {
     .map(
       ({ title, description, options, price, count }) =>
         `— ${[
-          count > 1 ? `*[ ${count} ]*` : "",
+          `> *${description}* | `,
+          count > 1 ? `*[ ${count} ]* |` : "",
           title,
-          description,
           options ? `_${options}_` : "",
           `> *$${price * count}*`,
         ]
