@@ -37,7 +37,7 @@ export function useFilteredProducts(filters: Partial<Product> = {}) {
   const products = useProducts();
   const t = useTranslation();
   const [query, setQuery] = React.useState("");
-  const productsBySearch = filterBy(products, {title: query, ...filters});
+  const productsBySearch = filterBy(products, {description: query, ...filters});
   const categories = groupBy(products, (product) => product.category).map(([category, products]): [
     Product["category"],
     number,
